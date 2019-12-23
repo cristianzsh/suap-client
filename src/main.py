@@ -1,9 +1,13 @@
 import json
+import os
 import requests
 import sys
 from prettytable import PrettyTable
 
 try:
+    #os.chdir(sys.argv[0][:-7])
+    abs_path = os.path.abspath(__file__)
+    os.chdir(os.path.dirname(abs_path))
     with open(".config", "r") as f:
         lines = f.readlines()
         auth = {"username": lines[0].split("=")[1][:-1],
