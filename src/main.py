@@ -5,7 +5,6 @@ import sys
 from prettytable import PrettyTable
 
 try:
-    #os.chdir(sys.argv[0][:-7])
     abs_path = os.path.abspath(__file__)
     os.chdir(os.path.dirname(abs_path))
     with open(".config", "r") as f:
